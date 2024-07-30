@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>Projects</h2>
+<div class="card-deck">
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/project1.jpg') }}" class="card-img-top" alt="Project 1">
+        <div class="card-body">
+            <h5 class="card-title">Movie Recommendation System</h5>
+            <p class="card-text">Developed an end-to-end system for generating personalized movie recommendations using collaborative filtering and content-based filtering techniques.</p>
+            <a href="https://github.com/kalyana-tirupathi-rao/movie-recommendation-system" class="btn btn-primary">View on GitHub</a>
+        </div>
+    </div>
+    <div class="card">
+        <img src="{{ url_for('static', filename='images/project2.jpg') }}" class="card-img-top" alt="Project 2">
+        <div class="card-body">
+            <h5 class="card-title">Cervical Cancer Prediction</h5>
+            <p class="card-text">Early detection system for cervical cancer using machine learning techniques to analyze patient data and predict cancer risk.</p>
+            <a href="https://github.com/kalyana-tirupathi-rao/cervical-cancer-prediction" class="btn btn-primary">View on GitHub</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

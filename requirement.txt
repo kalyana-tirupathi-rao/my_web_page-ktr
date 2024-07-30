@@ -1,0 +1,22 @@
+Flask==2.0.1
+pymongo==3.11.4.
+
+project Structure
+
+my_personal_website/
+├── app.py
+├── templates/
+│   ├── base.html
+│   ├── index.html
+│   ├── about.html
+│   ├── skills.html
+│   ├── projects.html
+│   ├── experience.html
+│   ├── education.html
+│   └── contact.html
+├── static/
+│   ├── css/
+│   │   └── styles.css
+│   └── images/
+│       └── profile.jpg
+└── requirements.txt
