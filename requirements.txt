@@ -1,2 +1,4 @@
-Flask==2.0.2
-Werkzeug==2.0.2
+echo "Flask==2.0.2" > requirements.txt
+echo "Werkzeug==2.0.2" >> requirements.txt
+echo "gunicorn==20.1.0" >> requirements.txt
+echo "pymongo==3.11.4" >> requirements.txt
