@@ -1,0 +1,26 @@
+apiVersion: core.choreo.dev/v1beta1
+kind: ComponentConfig
+spec:
+  # Inbound connections - defining the endpoints your service exposes
+  inbound:
+    # Unique name for the endpoint. This will be used to generate the managed API.
+    - name: FlaskService
+      # Numeric port value that gets exposed via the endpoint
+      port: 5000
+      # Type of traffic that the endpoint is accepting
+      type: REST
+      # Network level visibility of the endpoint (defaults to Public if not specified)
+      networkVisibility: Public
+      # Context (base path) of the API exposed via the endpoint
+      context: /api
+      # Path to the schema definition file (relative to the Docker context)
+      schemaFilePath: openapi.yaml
+
+  # Outbound connections - defining connections to external services
+  outbound:
+    serviceReferences:
+      - name: ExternalService
+        connectionConfig: external-service-connection-id
+        env:
+          - from: ServiceURL
+            to: EXTERNAL_SERVICE_URL
